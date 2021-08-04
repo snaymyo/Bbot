@@ -1,53 +1,25 @@
 {
-  "name": "TelegramCloneBot",
-  "description": "Telegram CloneBot by @jagrit007",
-  "logo": "https://i.imgur.com/ZLi4nDP.jpg",
-  "keywords": [
-    "telegram",
-    "clone",
-    "google drive",
-    "clone bot"
-  ],
-  "repository": "https://github.com/jagrit007/Telegram-CloneBot",
-  "website":   "https://github.com/jagrit007/Telegram-CloneBot",
-  "success_url": "https://t.me/scippletech",
-  "env": {
-    "BOT_TOKEN": {
-      "description": "Get this value from @BotFather on Telegram",
-      "value": "",
-      "required": true
-    },
-    "GDRIVE_FOLDER_ID": {
-      "description": "Google Drive Folder ID to Clone to. (Dont paste a link)",
-      "value": "",
-      "required": true
-    },
-    "OWNER_ID": {
-      "description": "Get this value by sending /id to @kelverbot on Telegram.",
-      "value": "",
-      "required": true
-    },
-    "AUTHORISED_USERS" : {
-      "description": "List of user ids to allow bot access to. Note: Write within [] and seperate with ,",
-      "value": "[]",
-      "required": false
-    },
-    "INDEX_URL": {
-      "description": "(Optional) CloudFlare Workers Index Link from GDINDEX (dont put / at end)",
-      "required": false
-    },
-    "IS_TEAM_DRIVE": {
-      "description": "Does you 'GDRIVE_FOLDER_ID' lead to a Team Drive or Normal Google Drive Folder",
-      "required": false,
-      "value": "False"
-    },
-    "USE_SERVICE_ACCOUNTS": {
-      "description": "If you are directly deploying from GitHub, set this to False. But if you later add Service Accounts, go to 'Config Vars' in app settings and set this to True.",
-      "value": "False",
-      "required": false
-    }
-  },
-  "buildpacks": [{
-    "url": "heroku/python"
-  }]
+	"name": "CloneBot",
+	"description": "CloneBot",
+	"repository": "https://github.com/MsGsuite/CloneBot",
+	"keywords": ["Gclone","TG"],
+	"repository": "https://github.com/MsGsuite/CloneBot",
+        "website": "https://t.me/msgsuitechat",
+        "success_url": "https://github.com/MsGsuite/CloneBot/blob/master/README.md",
+	"env": {
+		"telegram_token": {
+			"description": "Get from Telegram @Botfather."
+		},
+		"user_ids": {
+			"description": "Your user id. (If you want to add more than 1 User, give IDs seperated by ',').The First user is the Admin"
+		},
+		"group_ids": {
+			"description": "Create a Super Group(s) and add ID Here. Add -1 if you don't want to add a group.(If More than 1 group Give IDs seperated by ',')"
+		},
+		"gclone_para_override": {
+			"description": "Leave this if you don't know how to use it",
+			"required": false
+		}
+	},
+    	"stack": "container"
 }
